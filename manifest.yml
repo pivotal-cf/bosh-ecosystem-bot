@@ -1,0 +1,12 @@
+---
+applications:
+- name: bosh-ecosystem-bot
+  buildpack: nodejs_buildpack
+  env:
+    NODE_ENV: production
+    OPTIMIZE_MEMORY: true
+    APP_ID: 118206
+    # below variables where set using cf cli
+    # values are in lastpass under bosh-ecosystem-bot
+    # PRIVATE_KEY
+    # WEBHOOK_SECRET

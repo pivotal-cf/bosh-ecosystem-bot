@@ -1,0 +1,22 @@
+{
+    "name": "bosh-ecosystem-bot",
+    "private": true,
+    "dependencies": {
+        "probot": "7.3.1",
+        "probot-no-response": "probot/no-response",
+        "probot-stale": "probot/stale"
+    },
+    "scripts": {
+        "start": "probot run"
+    },
+    "probot": {
+        "apps": [
+            "probot-stale",
+            "probot-no-response"
+        ]
+    },
+    "engines": {
+        "node": ">=14.0.0",
+        "npm": ">=6.0.0"
+    }
+}
