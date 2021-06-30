@@ -13,7 +13,7 @@ jobs:
         with:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.PRIVATE_KEY }}
-          # repository: cloudfoundry/bosh-agent-index
+          repository: cloudfoundry/bosh-agent-index
       - uses: actions/stale@v3
         with:
           repo-token: ${{ steps.generate_token.outputs.token }}
