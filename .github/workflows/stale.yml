@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '*/5 * * * *'
 
+strategy:
+  matrix:
+    repository:
+    - cloudfoundry/bosh-agent-index
+
 jobs:
   stale:
     runs-on: ubuntu-18.04
@@ -13,7 +18,7 @@ jobs:
         with:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.PRIVATE_KEY }}
-          repository: cloudfoundry/bosh-agent-index
+          repository: ${{ matrix.repository }}
       - uses: actions/stale@v3
         with:
           repo-token: ${{ steps.generate_token.outputs.token }}
