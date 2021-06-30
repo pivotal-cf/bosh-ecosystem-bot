@@ -10,6 +10,7 @@ jobs:
       matrix:
         repository:
           - cloudfoundry/bosh-agent-index
+          - cloudfoundry/bosh-compiled-releases-index
     steps:
       - name: Generate token
         id: generate_token
