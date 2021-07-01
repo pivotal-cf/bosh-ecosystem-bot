@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
-        repository: ${{ fromJson(needs.provide_packages_json.outputs.matrix) }}
+        repository: ${{ fromJson(needs.provide_repositories_json.outputs.matrix) }}
 
     steps:
       - name: Generate token
