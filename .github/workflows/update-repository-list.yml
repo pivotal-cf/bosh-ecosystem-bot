@@ -11,9 +11,12 @@ jobs:
       - name: Update repository list
         shell: bash
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}  
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          DEBUG: true
         run: |
-          ./bin/update-repository-list.sh
+          set -x
+          echo "$(env)"
+          bash -x ./bin/update-repository-list.sh
           if git diff --exit-code
           if ! git diff --exit-code; then; echo "No changes"; exit 0; fi 
           git config user.name github-actions
