@@ -19,9 +19,16 @@ jobs:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.PRIVATE_KEY }}
           repository: ${{ matrix.repository }}
+      # GITHUB_REPOSITORY is protected and can not be set
+      # change to GH_REPOSITORY instead
+      - name: Patch stale resource to allow setting repository
+        run: |
+          sed -i 's/process.env.GITHUB_REPOSITORY/process.env.GH_REPOSITORY/g' \
+            /home/runner/work/_actions/actions/stale/*/dist/index.js
+        shell: bash
       - uses: actions/stale@v3
         env:
-          GITHUB_REPOSITORY: ${{ matrix.repository }}
+          GH_REPOSITORY: ${{ matrix.repository }}
         with:
           repo-token: ${{ steps.generate_token.outputs.token }}
           stale-issue-message: 'This issue is stale because it has been open 21 days with no activity. Remove stale label or comment or this will be closed in 7 days.'
