@@ -4,14 +4,14 @@ on:
     - cron: '*/5 * * * *'
 
 jobs:
-  stale:
+  update_repositories:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2      
       - name: Update repository list
         shell: bash
         env:
-          GITHUB_API_TOKEN: ${{ secrets.GH_TOKEN }}  
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  
         run: |
           ./bin/update-repository-list.sh
           if git diff --exit-code
