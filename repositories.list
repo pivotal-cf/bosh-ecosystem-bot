@@ -48,7 +48,6 @@ pivotal-cf/bosh-jenkins-config
 pivotal-cf/bosh-linux-stemcell-builder-lts
 pivotal-cf/bosh-lts
 pivotal-cf/bosh-lts-compiled-releases
-pivotal-cf/bosh-stemcells-ci
 pivotal-cf/bosh-team
 pivotal-cf/deployments-bosh
 pivotal-cf/dk-pivnet-stemcell-import
