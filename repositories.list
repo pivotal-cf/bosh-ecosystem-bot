@@ -51,9 +51,7 @@ pivotal-cf/bosh-lts-compiled-releases
 pivotal-cf/bosh-team
 pivotal-cf/deployments-bosh
 pivotal-cf/dk-pivnet-stemcell-import
-pivotal-cf/gemfire-release
 pivotal-cf/greenhouse-private
-pivotal-cf/ihop
 pivotal-cf/internal-docs
 pivotal-cf/oauth2-proxy
 pivotal-cf/ops-manager
@@ -61,11 +59,8 @@ pivotal-cf/ops-manager-ci
 pivotal-cf/ops-manager-dashboard
 pivotal-cf/ops-manager-license-files
 pivotal-cf/packer-builder-vsphere
-pivotal-cf/pcf-jmxbridge-release
 pivotal-cf/pcf-os-alerts-release
 pivotal-cf/pcf-repave-release
-pivotal-cf/pivnet-binary-checkpoint
-pivotal-cf/sprout-wrap
 pivotal-cf/terraforming-aws-ops-manager
 pivotal-cf/terraforming-azure-ops-manager
 pivotal-cf/terraforming-gcp-ops-manager
