@@ -18,6 +18,7 @@ jobs:
     needs: provide_repositories_json
     runs-on: ubuntu-18.04
     strategy:
+      fail-fast: false
       matrix:
         repository: ${{ fromJson(needs.provide_repositories_json.outputs.matrix) }}
 
