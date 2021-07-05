@@ -18,24 +18,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          curl -L -o ${GITHUB_WORKSPACE}/bosh https://github.com/cloudfoundry/bosh-cli/releases/download/v6.4.4/bosh-cli-6.4.4-linux-amd64
-          chmod -x ${GITHUB_WORKSPACE}/bosh
+          ruby ./bin/update-cfgitbot-config.rb cfgitbot-config/config-production.yml
 
           pushd cfgitbot-config
-
-          ${GITHUB_WORKSPACE}/bosh int config-production.yml -o <(
-            jq -sR 'split("\n") | map(select(. != ""))
-              | [{type: "replace", path: "/trackers/team_name=''Bosh Ecosystem''/repos", value: .}]'
-            ${GITHUB_WORKSPACE}/repositories.list) > config-production.yml.changed
-            
-          mv config-production.yml{.changed,}
 
           if [[ -n $(git status -s) ]]; then
             git config user.name bosh-admin-bot
             git config user.email dap-tas-journey-bosh-ecosystem@vmware.com
             git add .
             git commit -m "Update repo list for Bosh Ecosystem (GH Action: [${GITHUB_RUN_ID}]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID))"
-            # git push
+            git push
           fi
-
-          git show HEAD~1
