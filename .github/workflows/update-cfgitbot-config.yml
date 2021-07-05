@@ -30,5 +30,7 @@ jobs:
           title: 'Update Bosh Ecosystem repos'
           body: |
             This pull request was created using github actions. The configuration of which can be found in [pivotal-cf/bosh-ecosystem-bot](https://github.com/pivotal-cf/bosh-ecosystem-bot)
+
+            cc @rkoster
           draft: true
         
