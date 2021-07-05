@@ -8,8 +8,6 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-        with:
-          path: bosh-ecosystem-bot
       - uses: actions/checkout@v2
         with:
           path: cfgitbot-config
@@ -20,13 +18,12 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          curl -L -o ./bosh https://github.com/cloudfoundry/bosh-cli/releases/download/v6.4.4/bosh-cli-6.4.4-linux-amd64
-          chmod -x ./bosh
-          export PATH=${PATH}:$(pwd)
+          curl -L -o ${GITHUB_WORKSPACE}/bosh https://github.com/cloudfoundry/bosh-cli/releases/download/v6.4.4/bosh-cli-6.4.4-linux-amd64
+          chmod -x ${GITHUB_WORKSPACE}/bosh
 
           pushd cfgitbot-config
 
-          bosh int config-production.yml -o <(
+          ${GITHUB_WORKSPACE}/bosh int config-production.yml -o <(
             jq -sR 'split("\n") | map(select(. != ""))
               | [{type: "replace", path: "/trackers/team_name=''Bosh Ecosystem''/repos", value: .}]'
             ${GITHUB_WORKSPACE}/repositories.list) > config-production.yml.changed
