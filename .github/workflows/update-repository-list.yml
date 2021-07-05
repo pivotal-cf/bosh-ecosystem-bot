@@ -15,8 +15,8 @@ jobs:
         run: |
           ./bin/update-repository-list.sh
           if [[ -n $(git status -s) ]]; then
-            git config user.name github-actions
-            git config user.email github-actions@github.com
+            git config user.name bosh-admin-bot
+            git config user.email dap-tas-journey-bosh-ecosystem@vmware.com
             git add .
             git commit -m "Update repositories.list"
             git push
