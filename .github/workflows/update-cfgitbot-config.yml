@@ -8,11 +8,13 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-        path: bosh-ecosystem-bot
+        with:
+          path: bosh-ecosystem-bot
       - uses: actions/checkout@v2
-        path: cfgitbot-config
-        repository: pivotal-cf/cfgitbot-config
-        token: ${{ secrets.GH_TOKEN }}
+        with:
+          path: cfgitbot-config
+          repository: pivotal-cf/cfgitbot-config
+          token: ${{ secrets.GH_TOKEN }}
       - name: Update CF Gitbot config
         shell: bash
         env:
