@@ -4,6 +4,7 @@ on:
     paths:
       - 'repositories.list'
       - '.github/workflows/update-cfgitbot-config.yml'
+      - 'bin/update-cfgitbot-config.rb'
 
 jobs:
   update_config:
