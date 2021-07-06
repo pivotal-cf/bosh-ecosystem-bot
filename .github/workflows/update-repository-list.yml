@@ -1,5 +1,8 @@
 name: 'Update repository list'
 on:
+  push:
+    paths:
+      - '.github/workflows/update-repository-list.yml'
   schedule:
     - cron: '0 0 * * *'
 

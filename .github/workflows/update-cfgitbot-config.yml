@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'repositories.list'
+      - '.github/workflows/update-cfgitbot-config.yml'
 
 jobs:
   update_config:

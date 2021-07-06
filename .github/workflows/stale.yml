@@ -1,5 +1,9 @@
 name: 'Close stale issues and PRs'
 on:
+  push:
+    paths:
+      - 'repositories.list'
+      - '.github/workflows/stale.yml'
   schedule:
     - cron: '0 0 * * *'
 
