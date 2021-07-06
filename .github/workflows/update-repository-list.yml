@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/workflows/update-repository-list.yml'
+      - 'bin/update-repository-list.sh'
   schedule:
     - cron: '0 0 * * *'
 

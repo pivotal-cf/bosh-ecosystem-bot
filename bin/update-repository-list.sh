@@ -10,9 +10,8 @@ out=$(gh api graphql --paginate -f query="
 	  repositories {
 	    nodes { 
 	      url
-	      viewerPermission
+	      viewerCanAdminister
 	      isArchived
-	      isPrivate
 	    }
 	  }
           name
@@ -25,6 +24,6 @@ all="${all}${out}"
 done
 echo ${all} | jq -r -s '
      map(.data.organization.teams.nodes) | flatten 
-     | map(.repositories.nodes | map(select(.viewerPermission == "ADMIN" and .isArchived == false))) | flatten
+     | map(.repositories.nodes | map(select(.viewerCanAdminister and (.isArchived | not)))) | flatten
      | map("\(.url | split("/")[3:5] | join("/"))") | sort | unique | .[]
 ' > repositories.list
