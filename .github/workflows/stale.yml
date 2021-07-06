@@ -5,7 +5,7 @@ on:
       - 'repositories.list'
       - '.github/workflows/stale.yml'
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '*/30 * * * *'
 
 jobs:
   provide_repositories_json:
