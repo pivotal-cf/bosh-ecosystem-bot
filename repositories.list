@@ -53,8 +53,6 @@ pivotal-cf/bosh-team
 pivotal-cf/deployments-bosh
 pivotal-cf/dk-pivnet-stemcell-import
 pivotal-cf/greenhouse-private
-pivotal-cf/internal-docs
-pivotal-cf/oauth2-proxy
 pivotal-cf/ops-manager
 pivotal-cf/ops-manager-ci
 pivotal-cf/ops-manager-dashboard
