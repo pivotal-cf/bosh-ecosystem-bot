@@ -27,13 +27,6 @@ jobs:
         repository: ${{ fromJson(needs.provide_repositories_json.outputs.matrix) }}
 
     steps:
-      - name: Generate token
-        id: generate_token
-        uses: tibdex/github-app-token@v1
-        with:
-          app_id: ${{ secrets.APP_ID }}
-          private_key: ${{ secrets.PRIVATE_KEY }}
-          repository: ${{ matrix.repository }}
       # GITHUB_REPOSITORY is protected and can not be set
       # change to GH_REPOSITORY instead
       - name: Patch stale resource to allow setting repository
@@ -45,7 +38,7 @@ jobs:
         env:
           GH_REPOSITORY: ${{ matrix.repository }}
         with:
-          repo-token: ${{ steps.generate_token.outputs.token }}
+          repo-token: ${{ secrets.GH_TOKEN }}
           stale-issue-message: 'This issue was marked as `Stale` because it has been open for 21 days without any activity. If no activity takes place in the coming 7 days it will automatically be close. To prevent this from happening remove the `Stale` label or comment below.'
           stale-pr-message: 'This pull request was marked as `Stale` because it has been open for 21 days without any activity. If no activity takes place in the coming 7 days it will automatically be close. To prevent this from happening remove the `Stale` label or comment below.'
           close-issue-message: 'This issue was closed because it has been labeled `Stale` for 7 days without subsequent activity. Feel free to re-open this issue at any time by commenting below.'
