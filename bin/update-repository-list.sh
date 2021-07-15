@@ -1,7 +1,24 @@
 #!/bin/bash
 
+orgs=$(gh api graphql --paginate -f query='
+  query($endCursor: String) {
+    viewer {
+      organizations(first: 100, after: $endCursor) {
+	nodes { login }
+	pageInfo {
+	  hasNextPage
+	  endCursor
+	}
+      }
+    }
+  }
+' | jq -r -s '
+  map(.data.viewer.organizations.nodes | map(.login))
+  | flatten | sort | unique | .[]
+')
+
 all=""
-for org in cloudfoundry cloudfoundry-incubator bosh-packages bosh-io pivotal-cf bosh-tools pivotal pivotal-cf-experimental; do
+for org in $orgs; do
 out=$(gh api graphql --paginate -f query="
   query(\$endCursor: String) {
     organization(login: \"${org}\") {
