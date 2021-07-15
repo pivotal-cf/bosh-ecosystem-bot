@@ -35,3 +35,14 @@ Now start the action locally by running for example:
 ```
 act -j update_repositories --rm
 ```
+
+### Kill hanging actions
+Sometimes `act` keeps haninging after executing an action. Luckely it just uses Docker under the hood.
+```
+docker ps --filter "name=act" --format '{{.ID}}' | xargs docker rm -f
+```
+
+### Enter act container
+```
+docker exec -it $(docker ps --filter "name=act" --format '{{.ID}}' | head -n 1) /bin/bash
+```
