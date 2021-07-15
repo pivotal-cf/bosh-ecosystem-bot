@@ -9,4 +9,29 @@ Once access is granted wait for the [update-repository-list](https://github.com/
 
 ## Local Development requirments
 
-- Install [act](https://github.com/nektos/act)
+### Install [act](https://github.com/nektos/act)
+The `act` cli can be installed using brew:
+```
+brew install act
+```
+
+### Create .secrets file:
+To be able to interact with GitHub some secrets are needed. Act by default will read these from a `.secrets` file.
+On GitHub these secrets are configured using [Action Secrets](https://github.com/pivotal-cf/bosh-ecosystem-bot/settings/secrets/actions).
+
+```
+GH_TOKEN=$(bosh int <(lpass show --notes "bosh-ecosystem-bot") --path /github_bot_personal_access_token)
+echo "GH_TOKEN=${GH_TOKEN}" > .secrets
+echo "GITHUB_TOKEN=${GH_TOKEN}" >> .secrets
+```
+
+### Download act image
+When running `act` for the first time it will ask which image to use. Unfortunatly we depend on ruby which is only
+included in the large image. At the time of writing this image is around 20GB big, so depending on your internet connection might take a while to download.
+
+### Run an action
+Available actions can be found by running `act -l`.
+Now start the action locally by running for example:
+```
+act -j update_repositories --rm
+```
