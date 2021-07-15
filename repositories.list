@@ -38,6 +38,17 @@ cloudfoundry/syslog-release
 cloudfoundry/usn-resource
 cloudfoundry/windows-tools-release
 cloudfoundry/yagnats
+pivotal-cf-experimental/bats-concourse-pool
+pivotal-cf-experimental/bosh-ci
+pivotal-cf-experimental/bosh-deploy-key-bot
+pivotal-cf-experimental/bosh-lemon-release
+pivotal-cf-experimental/bosh-manual-fuzz-testing
+pivotal-cf-experimental/bosh-uaa-workspace
+pivotal-cf-experimental/boshng
+pivotal-cf-experimental/deployments-inconsulable
+pivotal-cf-experimental/remote-pairing-release
+pivotal-cf-experimental/tab-resize
+pivotal-cf-experimental/vm_shepherd
 pivotal-cf/bosh-checkman
 pivotal-cf/bosh-ci
 pivotal-cf/bosh-concourse-deployments
