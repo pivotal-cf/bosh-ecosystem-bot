@@ -5,6 +5,8 @@ on:
       - 'repositories.list'
       - '.github/workflows/update-cfgitbot-config.yml'
       - 'bin/update-cfgitbot-config.rb'
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   update_config:
