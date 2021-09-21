@@ -36,12 +36,14 @@ cloudfoundry/bosh-bbl-ci-envs
 cloudfoundry/bosh-cli
 cloudfoundry/bosh-compiled-releases-index
 cloudfoundry/bosh-cpi-environments
+cloudfoundry/bosh-cpi-go
 cloudfoundry/bosh-cpi-kb
 cloudfoundry/bosh-cpi-ruby
 cloudfoundry/bosh-davcli
 cloudfoundry/bosh-deployment
 cloudfoundry/bosh-dns-aliases-release
 cloudfoundry/bosh-dns-release
+cloudfoundry/bosh-docker-cpi-release
 cloudfoundry/bosh-gcscli
 cloudfoundry/bosh-google-cpi-release
 cloudfoundry/bosh-google-light-stemcell-builder
@@ -50,6 +52,8 @@ cloudfoundry/bosh-openstack-cpi-release
 cloudfoundry/bosh-s3cli
 cloudfoundry/bosh-stemcells-ci
 cloudfoundry/bosh-utils
+cloudfoundry/bosh-virtualbox-cpi-release
+cloudfoundry/bosh-warden-cpi-release
 cloudfoundry/bosh-workstation
 cloudfoundry/bpm-release
 cloudfoundry/bsdtar
