@@ -101,5 +101,6 @@ pivotal-cf/pcf-repave-release
 pivotal-cf/terraforming-aws-ops-manager
 pivotal-cf/terraforming-azure-ops-manager
 pivotal-cf/terraforming-gcp-ops-manager
+pivotal-cf/terraforming-openstack-ops-manager
 pivotal-cf/ulimit-release
 pivotal-cf/windows-tools-private-release
