@@ -63,6 +63,7 @@ cloudfoundry/docs-bosh
 cloudfoundry/gofileutils
 cloudfoundry/gosigar
 cloudfoundry/os-conf-release
+cloudfoundry/socks5-proxy
 cloudfoundry/syslog-release
 cloudfoundry/usn-resource
 cloudfoundry/windows-tools-release
