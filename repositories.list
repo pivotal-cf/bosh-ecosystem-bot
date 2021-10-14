@@ -21,6 +21,7 @@ cloudfoundry-incubator/bosh-windows-acceptance-tests
 cloudfoundry-incubator/bosh-windows-stemcell-builder
 cloudfoundry-incubator/event-log-release
 cloudfoundry-incubator/greenhouse-ci
+cloudfoundry-incubator/resolvconf-manager
 cloudfoundry-incubator/sample-windows-bosh-release
 cloudfoundry-incubator/stembuild
 cloudfoundry-incubator/windows-utilities-release
