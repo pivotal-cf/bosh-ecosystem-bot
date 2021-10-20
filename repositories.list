@@ -16,16 +16,7 @@ bosh-packages/python-release
 bosh-packages/ruby-release
 bosh-tools/bosh-cron-release
 bosh-tools/bosh-ext-cli
-cloudfoundry-incubator/bosh-cpi-certification
-cloudfoundry-incubator/bosh-windows-acceptance-tests
-cloudfoundry-incubator/bosh-windows-stemcell-builder
-cloudfoundry-incubator/event-log-release
 cloudfoundry-incubator/greenhouse-ci
-cloudfoundry-incubator/resolvconf-manager
-cloudfoundry-incubator/sample-windows-bosh-release
-cloudfoundry-incubator/stembuild
-cloudfoundry-incubator/windows-utilities-release
-cloudfoundry-incubator/windows-utilities-tests
 cloudfoundry/bosh
 cloudfoundry/bosh-acceptance-tests
 cloudfoundry/bosh-agent
