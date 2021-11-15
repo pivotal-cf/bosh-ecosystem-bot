@@ -45,6 +45,7 @@ cloudfoundry/bosh-s3cli
 cloudfoundry/bosh-stemcells-ci
 cloudfoundry/bosh-utils
 cloudfoundry/bosh-virtualbox-cpi-release
+cloudfoundry/bosh-vsphere-cpi-release
 cloudfoundry/bosh-warden-cpi-release
 cloudfoundry/bosh-workstation
 cloudfoundry/bpm-release
