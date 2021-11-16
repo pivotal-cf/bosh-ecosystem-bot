@@ -2,7 +2,7 @@
 
 require 'yaml'
 
-repos = File.readlines('repositories.list').map { |i| i.strip! }
+repos = File.readlines('vmware_repositories.list').map { |i| i.strip! }
 
 config = YAML.load_file(ARGV.first)
 

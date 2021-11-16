@@ -2,7 +2,7 @@ name: 'Update cfgitbot config'
 on:
   push:
     paths:
-      - 'repositories.list'
+      - 'vmware_repositories.list'
       - '.github/workflows/update-cfgitbot-config.yml'
       - 'bin/update-cfgitbot-config.rb'
   schedule:

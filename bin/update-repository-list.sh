@@ -44,3 +44,9 @@ echo ${all} | jq -r -s '
      | map(.repositories.nodes | map(select(.viewerCanAdminister and (.isArchived | not)))) | flatten
      | map("\(.url | split("/")[3:5] | join("/"))") | sort | unique | .[]
 ' > repositories.list
+
+comm -3 \
+     <(cat repositories.list | sort) \
+     <(comm -12 \
+	    <(./bin/fi-working-group-repo-list.sh | sort) \
+	    <(cat repositories.list | sort) | sort ) > vmware_repositories.list
