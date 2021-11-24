@@ -14,8 +14,6 @@ bosh-packages/java-release
 bosh-packages/nginx-release
 bosh-packages/python-release
 bosh-packages/ruby-release
-bosh-tools/bosh-cron-release
-bosh-tools/bosh-ext-cli
 cloudfoundry-incubator/greenhouse-ci
 cloudfoundry/bosh
 cloudfoundry/bosh-acceptance-tests
