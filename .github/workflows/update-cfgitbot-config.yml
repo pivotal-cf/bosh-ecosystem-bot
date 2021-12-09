@@ -1,5 +1,6 @@
 name: 'Update cfgitbot config'
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'vmware_repositories.list'
