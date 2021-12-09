@@ -23,7 +23,7 @@ jobs:
             git config user.name bosh-admin-bot
             git config user.email dap-tas-journey-bosh-ecosystem@vmware.com
             git add .
-            git commit -m "Update repositories.list"
+            git commit -m "Update {vmware_,}repositories.list"
             git push
           fi
 
