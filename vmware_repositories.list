@@ -11,6 +11,7 @@ pivotal-cf-experimental/deployments-inconsulable
 pivotal-cf-experimental/remote-pairing-release
 pivotal-cf-experimental/tab-resize
 pivotal-cf-experimental/vm_shepherd
+pivotal-cf/azstemcell
 pivotal-cf/bosh-checkman
 pivotal-cf/bosh-ci
 pivotal-cf/bosh-concourse-deployments
