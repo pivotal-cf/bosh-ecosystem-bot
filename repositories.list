@@ -14,7 +14,6 @@ bosh-packages/java-release
 bosh-packages/nginx-release
 bosh-packages/python-release
 bosh-packages/ruby-release
-cloudfoundry-incubator/greenhouse-ci
 cloudfoundry/bosh
 cloudfoundry/bosh-acceptance-tests
 cloudfoundry/bosh-agent

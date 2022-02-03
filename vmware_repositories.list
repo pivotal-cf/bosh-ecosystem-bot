@@ -1,5 +1,4 @@
 bosh-dep-forks/gnatsd
-cloudfoundry-incubator/greenhouse-ci
 pivotal-cf-experimental/bats-concourse-pool
 pivotal-cf-experimental/bosh-ci
 pivotal-cf-experimental/bosh-deploy-key-bot
