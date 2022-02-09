@@ -50,7 +50,6 @@ cloudfoundry/bsdtar
 cloudfoundry/config-server
 cloudfoundry/config-server-release
 cloudfoundry/docs-bosh
-cloudfoundry/gofileutils
 cloudfoundry/gosigar
 cloudfoundry/os-conf-release
 cloudfoundry/socks5-proxy
