@@ -18,6 +18,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
+          pushd /tmp
+          curl -OL https://github.com/cli/cli/releases/download/v2.6.0/gh_2.6.0_linux_amd64.tar.gz
+          tar -xf gh_2.6.0_linux_amd64.tar.gz
+          mv gh_2.6.0_linux_amd64/bin/gh /usr/local/bin
+          curl -OL https://github.com/geofffranks/spruce/releases/download/v1.29.0/spruce-linux-amd64
+          chmod +x spruce-linux-amd64
+          mv spruce-linux-amd64 /usr/local/bin/spruce
+          popd
           ./bin/update-repository-list.sh
           if [[ -n $(git status -s) ]]; then
             git config user.name bosh-admin-bot
