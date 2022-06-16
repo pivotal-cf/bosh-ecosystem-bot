@@ -14,6 +14,7 @@ bosh-packages/java-release
 bosh-packages/nginx-release
 bosh-packages/python-release
 bosh-packages/ruby-release
+cloudfoundry/bbl-state-resource
 cloudfoundry/bosh
 cloudfoundry/bosh-acceptance-tests
 cloudfoundry/bosh-agent
@@ -22,6 +23,7 @@ cloudfoundry/bosh-aws-cpi-release
 cloudfoundry/bosh-aws-light-stemcell-builder
 cloudfoundry/bosh-azure-cpi-release
 cloudfoundry/bosh-bbl-ci-envs
+cloudfoundry/bosh-bootloader
 cloudfoundry/bosh-cli
 cloudfoundry/bosh-compiled-releases-index
 cloudfoundry/bosh-cpi-environments
@@ -50,7 +52,9 @@ cloudfoundry/bsdtar
 cloudfoundry/config-server
 cloudfoundry/config-server-release
 cloudfoundry/docs-bosh
+cloudfoundry/exemplar-release
 cloudfoundry/gosigar
+cloudfoundry/jumpbox-deployment
 cloudfoundry/os-conf-release
 cloudfoundry/socks5-proxy
 cloudfoundry/syslog-release
