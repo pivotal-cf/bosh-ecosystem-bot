@@ -19,6 +19,7 @@ pivotal-cf/bosh-linux-stemcell-builder-lts
 pivotal-cf/bosh-lts
 pivotal-cf/bosh-lts-compiled-releases
 pivotal-cf/bosh-team
+pivotal-cf/build-metadata-resource
 pivotal-cf/deployments-bosh
 pivotal-cf/dk-pivnet-stemcell-import
 pivotal-cf/greenhouse-private
